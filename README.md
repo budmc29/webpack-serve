@@ -126,6 +126,25 @@ however, you can utilize any of the options above _in tandem_ with
 can be useful for setups with multiple configs that share common options for
 `webpack-serve`, but require subtle differences.
 
+### `webpack.config.js` example
+```js
+  const path = require('path');
+
+  const { NamedModulesPlugin } = require('webpack');
+
+  module.exports = {
+    context: __dirname,
+    devtool: 'source-map',
+    entry: ['./app.js'],
+    output: {
+      filename: './output.js',
+      path: path.resolve(__dirname),
+    },
+    plugins: [new NamedModulesPlugin()],
+    serve: {},
+  };
+```
+
 ### Webpack Config `serve` Property
 
 `webpack-serve` supports the `serve` property in your webpack config file, which
