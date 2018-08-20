@@ -126,11 +126,10 @@ however, you can utilize any of the options above _in tandem_ with
 can be useful for setups with multiple configs that share common options for
 `webpack-serve`, but require subtle differences.
 
-### `webpack.config.js` example
+### `webpack.config.js` Example
+
 ```js
   const path = require('path');
-
-  const { NamedModulesPlugin } = require('webpack');
 
   module.exports = {
     context: __dirname,
@@ -140,8 +139,6 @@ can be useful for setups with multiple configs that share common options for
       filename: './output.js',
       path: path.resolve(__dirname),
     },
-    plugins: [new NamedModulesPlugin()],
-    serve: {},
   };
 ```
 
