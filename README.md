@@ -139,6 +139,7 @@ can be useful for setups with multiple configs that share common options for
       filename: './output.js',
       path: path.resolve(__dirname),
     },
+    serve: {},
   };
 ```
 
